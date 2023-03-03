@@ -1,19 +1,19 @@
+#include "main.h"
 /**
- * reverse_array - reverses an array
+ * _strcmp - string to compare
+ * @s1: first string
+ * @s2: second string
  *
- * @a: array to reverse
- * @n: size of array
+ * Return: value of string
  */
-void reverse_array(int *a, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i;
-	int t;
+	int i = 0;
 
-	for (i = 0; i < n / 2; i++)
+	while (s1[i] - s2[i] == 0 && s1[i] != '\0')
 	{
-		t = a[i];
-		a[i] = a[n - i - 1];
-		a[n - i - 1] = t;
+		i++;
 	}
+	return (s1[i] - s2[i]);
 }
 
